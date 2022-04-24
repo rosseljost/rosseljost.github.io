@@ -18,17 +18,16 @@ for file in **/*.md; do \
         --katex \
         --section-divs \
         --filter "$HOME/.local/bin/pandoc-sidenote" \
-        --from markdown \
-        --to html5+smart \
+        --from gfm+smart \
+        --to html5 \
         --css "static/tufte.css" \
         --css "static/pandoc.css" \
         --css "static/tufte-extra.css" \
-        --css "static/nav.css" \
+        --css "static/custom.css" \
         --toc \
         --standalone \
         --template="$SCRIPT_DIR/tufte.html5" \
         --output "$out_filename" \
         "$file"
         # --css pandoc-solarized.css \
-        # --css "static/main.css" \
 done
