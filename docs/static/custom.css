@@ -1,3 +1,26 @@
+.socializer span a::after {
+    content: "";
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none !important;
+    opacity: .5;
+}
+
+a::after {
+    margin-left: 10px;
+    font-size: 87%;
+    content: "\20D5";
+    opacity: .5;
+    vertical-align: text-top;
+}
+
+
 /*  from https://github.com/jez/pandoc-markdown-css-theme
     (C) Jake Zimmerman - https://blueoakcouncil.org/license/1.0.0
 */
