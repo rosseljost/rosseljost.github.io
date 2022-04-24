@@ -1,0 +1,103 @@
+/*  from https://github.com/jez/pandoc-markdown-css-theme
+    (C) Jake Zimmerman - https://blueoakcouncil.org/license/1.0.0
+*/
+
+.date.before-toc {
+    padding-bottom: var(--line-height);
+}
+
+nav#TOC {
+    margin-bottom: var(--line-height);
+    border-left: 1px solid var(--color-text-secondary);
+    padding-left: 1.5rem;
+}
+
+nav#TOC input {
+    display: none;
+}
+
+nav#TOC label {
+    color: var(--color-link);
+    cursor: pointer;
+}
+
+nav#TOC>ul {
+    display: none;
+}
+
+nav#TOC>input:checked+ul {
+    display: block;
+}
+
+@media print {
+    nav#TOC>input+ul {
+        display: block;
+    }
+}
+
+/* Unfortunately, variables aren't in scope here.
+       * 745px = --main-width
+       * 52px = 2 * --line-height
+       * 206px = side note min width
+       */
+@media screen and (min-width: calc(745px + 2 * (52px + 206px + 52px) - 1px)) {
+    header {
+        margin-bottom: var(--line-height);
+    }
+
+    .date.before-toc {
+        padding-bottom: initial;
+    }
+
+    nav#TOC {
+        /* Unset some styles for small screen width */
+        margin-bottom: initial;
+        border-left: initial;
+        padding-left: initial;
+
+        position: sticky;
+        margin-top: calc(var(--nav-toc-baseline-offset));
+        float: left;
+        top: var(--line-height);
+
+        font-size: var(--nav-toc-font-size);
+        color: var(--color-text-secondary);
+
+        margin-left: var(--line-height);
+
+        max-width: calc((100vw - var(--main-width)) / 2 - 2 * var(--line-height));
+        max-height: calc(100vh - 2 * var(--line-height));
+        overflow-y: scroll;
+    }
+
+    nav#TOC label {
+        display: none;
+    }
+
+    nav#TOC ul {
+        display: block;
+        list-style: none;
+        margin-left: var(--nav-toc-indent);
+    }
+
+    nav#TOC>ul {
+        margin-left: 0;
+    }
+
+    nav#TOC code {
+        font-size: var(--nav-toc-code-font-size);
+    }
+
+    nav#TOC code,
+    nav#TOC a,
+    nav#TOD a:link,
+    nav#TOD a:visited {
+        color: var(--color-text-secondary);
+    }
+
+    nav#TOC a:hover,
+    nav#TOC a:hover code {
+        text-decoration: none;
+        color: var(--color-link);
+    }
+}
