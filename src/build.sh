@@ -7,12 +7,17 @@ SRC_DIR="$1"
 TMP_DIR="$2"
 DST_DIR="$3"
 
-# mkdir -p "$SRC_DIR"
-# mkdir -p "$TMP_DIR"
-# mkdir -p "$DST_DIR"
+# clean output directories
+cd "$TMP_DIR" && rm -r -- **/*.md *.md
+cd "$DST_DIR" && rm -r -- **/*.html *.html
 
 cd "$SCRIPT_DIR" || exit
 
 python3 jinja.py "$SRC_DIR" "$TMP_DIR"
 
 bash pandoc.sh "$TMP_DIR" "$DST_DIR"
+
+# own all files to standard user (docker might own folders created from the script)
+chown -R 1000:1000 "$SRC_DIR"
+chown -R 1000:1000 "$TMP_DIR"
+chown -R 1000:1000 "$DST_DIR"

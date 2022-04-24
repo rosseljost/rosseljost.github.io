@@ -7,7 +7,6 @@ from os import chdir
 import frontmatter
 from staticjinja import Site
 import sys
-from shutil import rmtree
 
 def get_contexts(md_dir: str):
     """
@@ -40,9 +39,6 @@ def get_contexts(md_dir: str):
 if __name__ == "__main__":
     in_dir = Path(sys.argv[1])
     out_dir = Path(sys.argv[2])
-    # in_dir.mkdir(parents=True, exist_ok=True)
-    # rmtree(out_dir)
-    # out_dir.mkdir(parents=True, exist_ok=True)
 
     global_context, file_contexts = get_contexts(in_dir)
 
