@@ -1,0 +1,9 @@
+chevron==0.14.0
+docopt-ng==0.7.2
+easywatch==0.0.5
+Jinja2==3.1.1
+MarkupSafe==2.1.1
+python-frontmatter==1.0.0
+PyYAML==5.1
+staticjinja==4.1.2
+watchdog==2.1.7
