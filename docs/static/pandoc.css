@@ -3,7 +3,9 @@
 */
 
 /* For smart quotes */
-q { quotes: "“" "”" "‘" "’"; }
+q {
+  quotes: "“""”""‘""’";
+}
 
 /* Override section behavior.
  * We only want the top-level <section> to have padding.
@@ -12,13 +14,16 @@ section {
   padding-top: initial;
   padding-bottom: initial;
 }
-article > section {
+
+article>section {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 /* Make byline (date and/or author) small */
-p.byline { font-size: 1.2rem; }
+p.byline {
+  font-size: 1.2rem;
+}
 
 
 /* Simulate Pandoc's table output styles */
@@ -26,10 +31,13 @@ table {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
+
 th {
   border-bottom: 1px solid black;
 }
-td, th {
+
+td,
+th {
   font-size: 1.4rem;
   padding: 10px;
   text-align: left;
@@ -54,7 +62,7 @@ figure.fullwidth table {
  * Otherwise, it's just a pre (without .sourceCode) */
 
 /* Unset the tufte-css defaults that we'd like to overwrite */
-pre > code {
+pre>code {
   margin-left: initial;
   overflow-x: initial;
   display: initial;
@@ -69,8 +77,8 @@ pre > code {
 div.sourceCode,
 pre:not(.sourceCode) {
   padding: 1.4rem;
-  margin: -0.7rem -1.4rem;
-  width: 55%;
+  width: 100%;
+  max-width: calc(650px - 7rem);
   overflow-x: auto;
 }
 
@@ -80,10 +88,11 @@ pre:not(.sourceCode) {
 }
 
 @media (max-width: 760px) {
+
   div.sourceCode,
   pre:not(.sourceCode) {
-    padding: 1.4rem 8vw;
-    margin: -0.7rem -8vw;
+    padding: 1.4rem 0;
+    margin: -0.7rem 0;
     width: 100%;
   }
 

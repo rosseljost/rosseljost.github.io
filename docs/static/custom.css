@@ -1,4 +1,5 @@
-.socializer span a::after {
+.socializer span a::after,
+code span a::after {
     content: "";
 }
 
@@ -20,107 +21,55 @@ a::after {
     vertical-align: text-top;
 }
 
-
-/*  from https://github.com/jez/pandoc-markdown-css-theme
-    (C) Jake Zimmerman - https://blueoakcouncil.org/license/1.0.0
-*/
-
-.date.before-toc {
-    padding-bottom: var(--line-height);
+#TOC {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    margin: 10rem 0 0 5%;
+    background: rgb(250, 250, 250);
 }
 
-nav#TOC {
-    margin-bottom: var(--line-height);
-    border-left: 1px solid var(--color-text-secondary);
-    padding-left: 1.5rem;
+#TOC ul {
+    margin: 0;
+    padding: 0;
+    font-size: initial;
+    line-height: initial;
 }
 
-nav#TOC input {
-    display: none;
+#TOC ul li {
+    margin: .5em;
+    list-style-type: none;
 }
 
-nav#TOC label {
-    color: var(--color-link);
-    cursor: pointer;
+#TOC ul li a::after {
+    content: none;
 }
 
-nav#TOC>ul {
-    display: none;
+div.sourceCode {
+    background: rgb(250, 250, 250);
 }
 
-nav#TOC>input:checked+ul {
-    display: block;
-}
-
-@media print {
-    nav#TOC>input+ul {
-        display: block;
-    }
-}
-
-/* Unfortunately, variables aren't in scope here.
-       * 745px = --main-width
-       * 52px = 2 * --line-height
-       * 206px = side note min width
-       */
-@media screen and (min-width: calc(745px + 2 * (52px + 206px + 52px) - 1px)) {
-    header {
-        margin-bottom: var(--line-height);
+@media (max-width: 1200px) {
+    #TOC {
+        position: inherit;
+        margin: inherit;
+        width: 100%;
+        max-width: calc(650px - 4.2rem);
+        padding: 0;
     }
 
-    .date.before-toc {
-        padding-bottom: initial;
+    body {
+        /* width: 84%; */
+        padding-left: 8%;
+        /* padding-right: 8%; */
     }
 
-    nav#TOC {
-        /* Unset some styles for small screen width */
-        margin-bottom: initial;
-        border-left: initial;
-        padding-left: initial;
-
-        position: sticky;
-        margin-top: calc(var(--nav-toc-baseline-offset));
-        float: left;
-        top: var(--line-height);
-
-        font-size: var(--nav-toc-font-size);
-        color: var(--color-text-secondary);
-
-        margin-left: var(--line-height);
-
-        max-width: calc((100vw - var(--main-width)) / 2 - 2 * var(--line-height));
-        max-height: calc(100vh - 2 * var(--line-height));
-        overflow-y: scroll;
-    }
-
-    nav#TOC label {
-        display: none;
-    }
-
-    nav#TOC ul {
-        display: block;
-        list-style: none;
-        margin-left: var(--nav-toc-indent);
-    }
-
-    nav#TOC>ul {
-        margin-left: 0;
-    }
-
-    nav#TOC code {
-        font-size: var(--nav-toc-code-font-size);
-    }
-
-    nav#TOC code,
-    nav#TOC a,
-    nav#TOD a:link,
-    nav#TOD a:visited {
-        color: var(--color-text-secondary);
-    }
-
-    nav#TOC a:hover,
-    nav#TOC a:hover code {
-        text-decoration: none;
-        color: var(--color-link);
+    .sidenote,
+    .marginnote {
+        margin-right: calc(-2rem - 200px);
     }
 }

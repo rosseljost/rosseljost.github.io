@@ -59,6 +59,8 @@ body {
     color: #111;
     max-width: 1400px;
     counter-reset: sidenote-counter;
+    padding-left: 300px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -143,23 +145,24 @@ div.epigraph {
     margin: 5em 0;
 }
 
-div.epigraph > blockquote {
+div.epigraph>blockquote {
     margin-top: 3em;
     margin-bottom: 3em;
 }
 
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
+div.epigraph>blockquote,
+div.epigraph>blockquote>p {
     font-style: italic;
 }
 
-div.epigraph > blockquote > footer {
+div.epigraph>blockquote>footer {
     font-style: normal;
 }
 
-div.epigraph > blockquote > footer > cite {
+div.epigraph>blockquote>footer>cite {
     font-style: italic;
 }
+
 /* end chapter epigraphs styles */
 
 blockquote {
@@ -168,25 +171,28 @@ blockquote {
 
 blockquote p {
     width: 55%;
+    max-width: calc(650px - 3em);
     margin-right: 40px;
 }
 
 blockquote footer {
     width: 55%;
+    max-width: calc(650px - 3em);
     font-size: 1.1rem;
     text-align: right;
 }
 
-section > p,
-section > footer,
-section > table {
-    width: 55%;
+section>p,
+section>footer,
+section>table {
+    width: 100%;
+    max-width: calc(650px - 3em);
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
-section > dl,
-section > ol,
-section > ul {
+section>dl,
+section>ol,
+section>ul {
     width: 50%;
     -webkit-padding-start: 5%;
 }
@@ -268,7 +274,7 @@ img {
 .marginnote {
     float: right;
     clear: right;
-    margin-right: -60%;
+    margin-right: -50%;
     width: 50%;
     margin-top: 0.3rem;
     margin-bottom: 0;
@@ -276,6 +282,8 @@ img {
     line-height: 1.3;
     vertical-align: baseline;
     position: relative;
+    max-width: 200px;
+    opacity: .75;
 }
 
 .sidenote-number {
@@ -325,29 +333,31 @@ div.table-wrapper {
     letter-spacing: .03em;
 }
 
-code, pre > code {
+code,
+pre>code {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.0rem;
     line-height: 1.42;
-    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
 }
 
-.sans > code {
+.sans>code {
     font-size: 1.2rem;
 }
 
-h1 > code,
-h2 > code,
-h3 > code {
+h1>code,
+h2>code,
+h3>code {
     font-size: 0.80em;
 }
 
-.marginnote > code,
-.sidenote > code {
+.marginnote>code,
+.sidenote>code {
     font-size: 1rem;
 }
 
-pre > code {
+pre>code {
     font-size: 0.9rem;
     width: 52.5%;
     margin-left: 2.5%;
@@ -355,13 +365,13 @@ pre > code {
     display: block;
 }
 
-pre.fullwidth > code {
+pre.fullwidth>code {
     width: 90%;
 }
 
 .fullwidth {
     max-width: 90%;
-    clear:both;
+    clear: both;
 }
 
 span.newthought {
@@ -383,7 +393,8 @@ label.margin-toggle:not(.sidenote-number) {
 
 .iframe-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     padding-top: 25px;
     height: 0;
 }
@@ -404,19 +415,19 @@ label.margin-toggle:not(.sidenote-number) {
     }
 
     hr,
-    section > p,
-    section > footer,
-    section > table {
+    section>p,
+    section>footer,
+    section>table {
         width: 100%;
     }
 
-    pre > code {
+    pre>code {
         width: 97%;
     }
 
-    section > dl,
-    section > ol,
-    section > ul {
+    section>dl,
+    section>ol,
+    section>ul {
         width: 90%;
     }
 
@@ -440,27 +451,6 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 
-    label.margin-toggle:not(.sidenote-number) {
-        display: inline;
-    }
-
-    .sidenote,
-    .marginnote {
-        display: none;
-    }
-
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
-        display: block;
-        float: left;
-        left: 1rem;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        vertical-align: baseline;
-        position: relative;
-    }
-
     label {
         cursor: pointer;
     }
@@ -472,5 +462,29 @@ label.margin-toggle:not(.sidenote-number) {
 
     img {
         width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none;
+    }
+
+    .margin-toggle:checked+.sidenote,
+    .margin-toggle:checked+.marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+        max-width: none;
     }
 }
