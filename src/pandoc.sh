@@ -11,6 +11,7 @@ cd "$IN_DIR" || exit
 
 shopt -s globstar
 for file in **/*.md; do \
+    prefix=$(python3 -c "n=len([x for x in '$file'.split('/') if len(x)>0])-1; print('../' * n)")
     out_filename="$OUT_DIR/${file%.*}.html"
     echo "Create $out_filename"
     mkdir -p "$(dirname "$out_filename")"
@@ -18,12 +19,12 @@ for file in **/*.md; do \
         --katex \
         --section-divs \
         --filter "$HOME/.local/bin/pandoc-sidenote" \
-        --from gfm+smart \
+        --from markdown+raw_html+smart \
         --to html5 \
-        --css "static/tufte.css" \
-        --css "static/pandoc.css" \
-        --css "static/tufte-extra.css" \
-        --css "static/custom.css" \
+        --css "${prefix}static/tufte.css" \
+        --css "${prefix}static/pandoc.css" \
+        --css "${prefix}static/tufte-extra.css" \
+        --css "${prefix}static/custom.css" \
         --toc \
         --standalone \
         --template="$SCRIPT_DIR/tufte.html5" \
