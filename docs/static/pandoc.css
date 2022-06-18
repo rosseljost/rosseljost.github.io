@@ -87,7 +87,7 @@ pre:not(.sourceCode) {
   width: 100%;
 }
 
-@media (max-width: 760px) {
+/* @media (max-width: 760px) {
 
   div.sourceCode,
   pre:not(.sourceCode) {
@@ -99,7 +99,7 @@ pre:not(.sourceCode) {
   .fullwidth {
     max-width: 100%;
   }
-}
+} */
 
 /* Math formatting */
 .katex {
