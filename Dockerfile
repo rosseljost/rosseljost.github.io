@@ -29,7 +29,4 @@ WORKDIR /
 
 COPY src/ /src
 
-ENTRYPOINT bash /src/build.sh /content /content-rendered /docs
-
-# docker build --pull --rm -f "Dockerfile" -t tufte-pandoc:latest .
-# docker run --rm -it -v "$(pwd)/content:/content" -v "$(pwd)/content-rendered:/content-rendered" -v "$(pwd)/docs:/docs" --entrypoint bash tufte-pandoc:latest
+ENTRYPOINT bash /src/build.sh /content /content-rendered /docs /meta

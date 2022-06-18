@@ -4,6 +4,7 @@
 
 IN_DIR="$1"
 OUT_DIR="$2"
+META_DIR="$3"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
@@ -16,19 +17,15 @@ for file in **/*.md; do \
     echo "Create $out_filename"
     mkdir -p "$(dirname "$out_filename")"
     pandoc \
-        --katex \
-        --section-divs \
+        --defaults="$META_DIR/defaults.yaml" \
         --filter "$HOME/.local/bin/pandoc-sidenote" \
-        --from markdown+raw_html+smart \
-        --to html5 \
         --css "${prefix}static/tufte.css" \
         --css "${prefix}static/pandoc.css" \
+        --css "${prefix}static/code.css" \
         --css "${prefix}static/tufte-extra.css" \
         --css "${prefix}static/custom.css" \
-        --toc \
         --standalone \
         --template="$SCRIPT_DIR/tufte.html5" \
         --output "$out_filename" \
         "$file"
-        # --css pandoc-solarized.css \
 done

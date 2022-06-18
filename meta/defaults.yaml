@@ -1,0 +1,8 @@
+html-math-method:
+  method: katex
+section-divs: true
+from: markdown+raw_html+smart
+to: html5
+toc: true
+metadata:
+  lang: en-US
