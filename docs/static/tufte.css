@@ -187,6 +187,7 @@ section>footer,
 section>table {
     width: 100%;
     max-width: calc(650px - 3em);
+    hyphens: auto;
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
