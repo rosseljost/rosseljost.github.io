@@ -2,12 +2,20 @@
 title: Jost Rossel
 header-includes: |
     <link rel="stylesheet" type="text/css" href="static/socializer.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+navbar: |
+    <div class="navbar">
+    <a href="/">/home/jost</a>
+    <!-- <a class="right" href="/resume.html">résumé</a> -->
+    <!-- <a class="right" href="/publications.html">publications</a> -->
+    <!-- <a class="right" href="/blog.html">blog</a> -->
+    </div>
 ---
+
+{{ global.index.navbar }}
 
 <section>
 
-I'm a Computer Science Master and co-founder of [/upb/hack.](https://upbhack.de/){target="_blank"}
+I'm a Computer Science Master and co-founder of [/upb/hack](https://upbhack.de/){target="_blank"}.
 I graduated from [Paderborn University](https://upb.de){target="_blank"} in 2022.
 My studies mainly focused on security, where my main interests are the security of network protocols and file formats.
 
