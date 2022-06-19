@@ -6,20 +6,29 @@ code span a::after {
 a {
     text-decoration: none !important;
     color: inherit;
+    background: rgb(245, 245, 245);
+    border-radius: 8px;
 }
 
 a:hover {
-    text-decoration: none !important;
-    opacity: .5;
+    transition-property: background;
+    transition-duration: 0.2s;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
 }
 
-a::after {
+/* a::after {
     margin-left: 10px;
     font-size: 87%;
     content: "\20D5";
     opacity: .5;
-    vertical-align: text-top;
 }
+
+@supports (-moz-appearance:none) {
+    a::after {
+        margin-left: 5px;
+    }
+} */
 
 #TOC {
     height: 100%;
@@ -45,8 +54,12 @@ a::after {
     list-style-type: none;
 }
 
-#TOC ul li a::after {
-    content: none;
+#TOC ul li a {
+    background: transparent;
+}
+
+#TOC ul li a:hover {
+    opacity: .5;
 }
 
 div.sourceCode {
@@ -72,4 +85,92 @@ div.sourceCode {
     .marginnote {
         margin-right: calc(-2rem - 200px);
     }
+}
+
+/* navbar on top */
+
+.navbar {
+    overflow: hidden;
+    background-color: #fffff8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    max-width: calc(650px - 4.2rem);
+    border-bottom: 1px solid grey;
+}
+
+.navbar .right {
+    float: right;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        position: absolute;
+        width: unset;
+    }
+
+    .navbar .right {
+        float: left;
+    }
+}
+
+@media (max-width: 380px) {
+    header h1 {
+        margin-top: 12rem;
+    }
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #111;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 22px;
+    background: transparent;
+}
+
+.navbar a:hover {
+    opacity: .5;
+}
+
+/* blog listing */
+
+.blogsection-year h1 {
+    /* border-top: 2px solid black; */
+    font-size: 2.2rem;
+    color: gray;
+    text-align: right;
+    width: 100%;
+    max-width: calc(650px - 4.2rem);
+}
+
+.blogpost,
+.blogpost > p {
+    width: 100%;
+    max-width: calc(650px - 4.2rem);
+}
+
+.blogpost-title {
+    padding-top: .5em;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 1;
+    border-top: 1px solid gray;
+    margin-bottom: .2em;
+}
+
+.blogpost-subtitle {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-top: 0;
+}
+
+.blogpost-metadata {
+    font-size: 1rem;
+    line-height: 1;
 }
