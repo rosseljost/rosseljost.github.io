@@ -47,5 +47,6 @@ if __name__ == "__main__":
         contexts=file_contexts,
         searchpath=in_dir,
         outpath=out_dir,
+        extensions=['jinja2.ext.do'],
     )
     site.render()
