@@ -15,9 +15,8 @@ navbar: |
 
 <section>
 
-I'm a Computer Science Master and co-founder of [/upb/hack](https://upbhack.de/){target="_blank"}.
-I graduated from [Paderborn University](https://upb.de){target="_blank"} in 2022.
-My studies mainly focused on security, where my main interests are the security of network protocols and file formats.
+I'm a Computer Science PHD student at [Paderborn University](https://upb.de){target="_blank"} and co-founder of [/upb/hack](https://upbhack.de/){target="_blank"}.
+My studies mainly focus on security, where my main interests are the security of network protocols and file formats.
 
 In my spare time---the technology side at least---I find myself often to work on typography and document conversion.
 
