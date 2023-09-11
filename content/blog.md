@@ -15,10 +15,14 @@ title: Blog
 # {{ year_group.grouper }}
 :::
 {% for post in year_group.list|sort(attribute='date',reverse=True) %}
+{% if post.externalLink %}
+<a class="blogpost" target="_blank" href="{{post.externalLink}}">
+{% else %}
 <a class="blogpost" href="/posts/{{post.filename}}.html">
-<p class="blogpost-title">{{post.title}}</p>
+{% endif %}
+<p class="blogpost-title">{{post.title}}{% if post.externalLink %}<sup class="blogpost-metadata"> [external]</sup>{% endif %}</p>
 {% if post.subtitle %}<p class="blogpost-subtitle">{{post.subtitle}}</p>{% endif %}
 <p class="blogpost-metadata">{{post.date}}</p>
-</a> 
+</a>
 {% endfor %}
 {% endfor %}
