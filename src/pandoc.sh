@@ -24,7 +24,6 @@ for file in **/*.md; do \
         --css "${prefix}static/code.css" \
         --css "${prefix}static/tufte-extra.css" \
         --css "${prefix}static/custom.css" \
-        --css "https://use.fontawesome.com/releases/v5.15.3/css/all.css" \
         --standalone \
         --template="$SCRIPT_DIR/tufte.html5" \
         --output "$out_filename" \
