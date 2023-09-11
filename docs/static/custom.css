@@ -3,6 +3,10 @@ code span a::after {
     content: "";
 }
 
+.socializer span a svg path {
+    fill: #333333;
+}
+
 a {
     text-decoration: none !important;
     color: inherit;
@@ -148,7 +152,7 @@ div.sourceCode {
 }
 
 .blogpost,
-.blogpost > p {
+.blogpost>p {
     width: 100%;
     max-width: calc(650px - 4.2rem);
 }
