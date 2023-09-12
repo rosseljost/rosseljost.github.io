@@ -25,9 +25,23 @@
 <h1 class="title">Usage Statistics of 3D Printing File Formats</h1>
 <p class="subtitle">an overview of the usage of different file formats
 used for 3D printing</p>
-<p class="byline">2022-12-02 &ndash; Jost Rossel</p>
+<p class="byline">2022-12-02 &mdash; Jost Rossel</p>
 </header>
-
+<div class="navbar">
+<p><a href="/">/home/jost</a>
+<!-- <a class="right" href="/resume.html">résumé</a> -->
+<!-- <a class="right" href="/publications.html">publications</a> -->
+<a class="right" href="/blog.html">blog</a></p>
+</div>
 </article>
+<script>
+window.onload = function() {
+if(location.hash){
+var elId = location.hash.replace(‘#’,”);
+var scrollToEl = document.getElementById(elId);
+if(scrollToEl) scrollToEl.scrollIntoView(true);
+}
+}
+</script>
 </body>
 </html>

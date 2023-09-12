@@ -6,3 +6,5 @@ category: 2022
 date: 2022-11-02
 externalLink: https://hackmanit.de/de/blog/157-xml-an-overview
 ---
+
+{{ global.index.navbar }}
