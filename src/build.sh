@@ -14,7 +14,7 @@ cd "$DST_DIR" && rm -r -- **/*.html *.html
 
 cd "$SCRIPT_DIR" || exit
 
-python3 jinja.py "$SRC_DIR" "$TMP_DIR" "$META_DIR"
+. /venv/bin/activate && python3 jinja.py "$SRC_DIR" "$TMP_DIR" "$META_DIR"
 
 bash pandoc.sh "$TMP_DIR" "$DST_DIR" "$META_DIR"
 
