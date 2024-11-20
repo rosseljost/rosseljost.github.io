@@ -143,12 +143,19 @@ div.sourceCode {
 /* blog listing */
 
 .blogsection-year h1 {
-    /* border-top: 2px solid black; */
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: gray;
     text-align: right;
     width: 100%;
     max-width: calc(650px - 4.2rem);
+    margin-top: 10px;
+}
+
+.blogsection-year {
+    padding-bottom: 0rem;
+    margin-bottom: -1rem;
+    margin-left: 6rem;
+    margin-top: -1rem;
 }
 
 .blogpost,
@@ -160,21 +167,36 @@ div.sourceCode {
 .blogpost-title {
     padding-top: .5em;
     font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 1;
+    font-size: 1.8rem;
+    line-height: 1.1;
     border-top: 1px solid gray;
     margin-bottom: .2em;
 }
 
 .blogpost-subtitle {
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 400;
-    font-size: 1.7rem;
-    line-height: 1;
-    margin-top: 0;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-top: .5em;
 }
 
 .blogpost-metadata {
     font-size: 1rem;
     line-height: 1;
+}
+
+.abstract summary,
+.abstract p {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.blogpost-metadata a {
+    background: rgb(230, 230, 230);
+    border-radius: 8px;
+}
+
+.author-other {
+    color: #535353;
 }

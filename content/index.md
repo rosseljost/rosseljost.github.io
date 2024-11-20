@@ -6,7 +6,7 @@ navbar: |
     <div class="navbar">
     <a href="/">/home/jost</a>
     <!-- <a class="right" href="/resume.html">résumé</a> -->
-    <!-- <a class="right" href="/publications.html">publications</a> -->
+    <a class="right" href="/publications.html">publications</a>
     <a class="right" href="/blog.html">blog</a>
     </div>
 ---
