@@ -14,9 +14,9 @@ title: Publications
 </p>
 <p class="blogpost-metadata">{{pub.type}}{% if pub.event %} @ {{pub.event}}{% endif %}</p>
 <p class="blogpost-metadata">
-    {% if pub.pdf %}<a href="{{pub.pdf}}" target="_blank">&nbsp;&nbsp;PDF&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif %}
-    {% if pub.publisherUrl %}<a href="{{pub.publisherUrl}}" target="_blank">&nbsp;@ Publisher&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif %}
-    {% if pub.doi %}<a href="https://doi.org/{{pub.doi}}" target="_blank">&nbsp;&nbsp;DOI&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif %}
+    {%- if pub.pdf %}<a href="{{pub.pdf}}" target="_blank">&nbsp;&nbsp;PDF&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif -%}
+    {%- if pub.publisherUrl %}<a href="{{pub.publisherUrl}}" target="_blank">&nbsp;@ Publisher&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif -%}
+    {%- if pub.doi %}<a href="https://doi.org/{{pub.doi}}" target="_blank">&nbsp;&nbsp;DOI&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;{% endif -%}
 </p>
 {% if pub.abstract %}
 <details class="abstract">
