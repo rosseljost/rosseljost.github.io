@@ -93,6 +93,7 @@
         "event": "USENIX '25",
         "date": "2025-08",
         "type": "Conference Paper",
+        "publisherUrl": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel",
         "pdf": "/static/publications/rossel_SecurityImplicationsGCodes_2025.pdf"
     }
 ]
