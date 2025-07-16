@@ -192,9 +192,12 @@ div.sourceCode {
     line-height: 1.2;
 }
 
-.blogpost-metadata a {
+.blogpost-metadata .publink {
     background: rgb(230, 230, 230);
     border-radius: 8px;
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-right: 1ex;
 }
 
 .author-other {

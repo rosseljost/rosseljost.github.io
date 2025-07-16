@@ -37,12 +37,14 @@
             }
         ],
         "event": "EuroS&PW '23",
-        "doi": "10.1109/EuroSPW59978.2023.00048",
         "date": "2023-07-03",
         "page": "379–385",
         "type": "Workshop Paper",
-        "publisherUrl": "https://ieeexplore.ieee.org/document/10190647",
-        "pdf": "/static/publications/pottebaum_ReEnvisioningIndustrialControl_2023.pdf"
+        "links": {
+            "PDF": "/static/publications/pottebaum_ReEnvisioningIndustrialControl_2023.pdf",
+            "@ Publisher": "https://ieeexplore.ieee.org/document/10190647",
+            "DOI": "https://doi.org/10.1109/EuroSPW59978.2023.00048"
+        }
     },
     {
         "title": "Security Analysis of the 3MF Data Format",
@@ -62,12 +64,14 @@
             }
         ],
         "event": "RAID '23",
-        "doi": "10.1145/3607199.3607216",
         "date": "2023-10-16",
         "page": "179–194",
         "type": "Conference Paper",
-        "publisherUrl": "https://dl.acm.org/doi/10.1145/3607199.3607216",
-        "pdf": "/static/publications/rossel_SecurityAnalysis3MF_2023.pdf"
+        "links": {
+            "PDF": "/static/publications/rossel_SecurityAnalysis3MF_2023.pdf",
+            "@ Publisher": "https://dl.acm.org/doi/10.1145/3607199.3607216",
+            "DOI": "https://doi.org/10.1145/3607199.3607216"
+        }
     },
     {
         "title": "Security Implications of Malicious G-Codes in 3D Printing",
@@ -93,7 +97,9 @@
         "event": "USENIX '25",
         "date": "2025-08",
         "type": "Conference Paper",
-        "publisherUrl": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel",
-        "pdf": "/static/publications/rossel_SecurityImplicationsGCodes_2025.pdf"
+        "links": {
+            "PDF": "/static/publications/rossel_SecurityImplicationsGCodes_2025.pdf",
+            "@ Publisher": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel"
+        }
     }
 ]
