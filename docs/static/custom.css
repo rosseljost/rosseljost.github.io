@@ -189,7 +189,8 @@ div.sourceCode {
 .abstract summary,
 .abstract p {
     font-size: 1.3rem;
-    line-height: 1.2;
+    line-height: 1.7rem;
+    hyphens: auto;
 }
 
 .blogpost-metadata .publink {
