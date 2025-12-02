@@ -101,5 +101,56 @@
             "PDF": "/static/publications/rossel_SecurityImplicationsGCodes_2025.pdf",
             "@ Publisher": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel"
         }
+    },
+    {
+        "title": "Poster: Computer Security Researchers' Experiences with Vulnerability Disclosures",
+        "abstract": "Vulnerability disclosures are necessary to improve the security of our digital ecosystem. However, they can also be challenging for researchers: it may be hard to find out who the affected parties even are, or how to contact them. Researchers may be ignored or face adversity when disclosing vulnerabilities. We investigate researchers' experiences with vulnerability disclosures, extract best practices, and make recommendations for researchers, institutions that employ them, industry, and regulators to enable effective vulnerability disclosures.",
+        "author": [
+            {
+                "family": "Sri Ramulu",
+                "given": "Harshini"
+            },
+            {
+                "family": "Rotthaler",
+                "given": "Anna Lena"
+            },
+            {
+                "family": "Rossel",
+                "given": "Jost"
+            },
+            {
+                "family": "Gonzalez Rodriguez",
+                "given": "Rachel"
+            },
+            {
+                "family": "Wermke",
+                "given": "Dominik"
+            },
+            {
+                "given": "Sascha",
+                "family": "Fahl"
+            },
+            {
+                "family": "Kohno",
+                "given": "Tadayoshi"
+            },
+            {
+                "family": "Somorovsky",
+                "given": "Juraj"
+            },
+            {
+                "family": "Acar",
+                "given": "Yasemin"
+            }
+        ],
+        "event": "ACM CCS '25",
+        "date": "2025-10",
+        "type": "Conference Poster",
+        "links": {
+            "PDF": "/static/publications/sri-ramulu_PosterComputerSecurity_2025.pdf",
+            "@ Publisher": "https://dl.acm.org/doi/10.1145/3719027.3760723",
+            "DOI": "https://doi.org/10.1145/3719027.3760723",
+            "Best Poster Award": "https://cs.uni-paderborn.de/en/syssec/news/news-entry/distinguished-paper-artifact-and-poster-awards-for-our-group-at-acm-ccs"
+        }
     }
 ]
