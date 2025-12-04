@@ -70,7 +70,8 @@
         "links": {
             "PDF": "/static/publications/rossel_SecurityAnalysis3MF_2023.pdf",
             "@ Publisher": "https://dl.acm.org/doi/10.1145/3607199.3607216",
-            "DOI": "https://doi.org/10.1145/3607199.3607216"
+            "DOI": "https://doi.org/10.1145/3607199.3607216",
+            "Slides": "/static/slides/rossel_SecurityAnalysis3MF_2023.pdf"
         }
     },
     {
@@ -99,7 +100,9 @@
         "type": "Conference Paper",
         "links": {
             "PDF": "/static/publications/rossel_SecurityImplicationsGCodes_2025.pdf",
-            "@ Publisher": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel"
+            "@ Publisher": "https://www.usenix.org/conference/usenixsecurity25/presentation/rossel",
+            "Slides": "/static/slides/rossel_SecurityImplicationsGCodes_2025.pdf",
+            "Poster": "/static/posters/rossel_SecurityImplicationsGCodes_2025.pdf"
         }
     },
     {
